@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity">
+    tools:context=".ui.login.LoginActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:alpha="0"
             android:text="@string/login_title"
-            android:textColor="@color/black"
+            android:textColor="@color/primary_blue"
             android:textSize="32sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -115,7 +115,7 @@
             app:startIconDrawable="@drawable/ic_password_24"
             tools:alpha="100">
 
-            <com.example.pregnagrowth.PasswordEditText
+            <com.example.pregnagrowth.customview.PasswordEditText
                 android:id="@+id/edt_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

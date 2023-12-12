@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SignupActivity">
+    tools:context=".ui.signup.SignupActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -195,7 +195,7 @@
             app:startIconDrawable="@drawable/ic_password_24"
             tools:alpha="100">
 
-            <com.example.pregnagrowth.PasswordEditText
+            <com.example.pregnagrowth.customview.PasswordEditText
                 android:id="@+id/edt_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -232,7 +232,7 @@
             app:startIconDrawable="@drawable/ic_password_24"
             tools:alpha="100">
 
-            <com.example.pregnagrowth.PasswordEditText
+            <com.example.pregnagrowth.customview.PasswordEditText
                 android:id="@+id/edt_confirm_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

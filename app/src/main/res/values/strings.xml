@@ -10,12 +10,31 @@
     <string name="desc_menu_3">Menyediakan jawaban dari pertanyaan yang sering muncul terkait kehamilan, dari berbagai sumber terpercaya</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
-    <string name="login">MASUK</string>
     <string name="login_to_signup">Belum punya akun? Daftar</string>
     <string name="full_name">Nama Lengkap</string>
     <string name="username">Username</string>
     <string name="birth_date">Tanggal Lahir</string>
-    <string name="signup">DAFTAR</string>
     <string name="confirm_password">Konfirmasi Password</string>
     <string name="signup_to_login">Sudah memiliki akun? Masuk</string>
+
+    <!--Input Activity-->
+    <string name="input_description">Silakan jawab terlebih dahulu pertanyaan-pertanyaan ini ya Moms!</string>
+    <string name="input_weight">Berapa berat badan Moms sekarang?</string>
+    <string name="input_pregnancy_age">Berapa usia kehamilan janin Moms sekarang?</string>
+    <string name="input_sleep_hours">Berapa jam Moms tidur setiap malamnya?</string>
+
+    <!--Buttons-->
+    <string name="continue_button">LANJUT</string>
+    <string name="kg">kg</string>
+    <string name="week">minggu</string>
+    <string name="day">hari</string>
+    <string name="login">MASUK</string>
+    <string name="signup">DAFTAR</string>
+    <string name="decrease">-</string>
+    <string name="increase">+</string>
+    <string name="less_than_four_hours">Kurang dari 4 jam</string>
+    <string name="four_to_six_hours">4-6 jam</string>
+    <string name="seven_to_eight_hours">7-8 jam</string>
+    <string name="more_than_eight_hours">Lebih dari 8 jam</string>
+    <string name="example_weight">50</string>
 </resources>

@@ -1,4 +1,4 @@
-package com.example.pregnagrowth
+package com.example.pregnagrowth.customview
 
 import android.content.Context
 import android.util.AttributeSet
