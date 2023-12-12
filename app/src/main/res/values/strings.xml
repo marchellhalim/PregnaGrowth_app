@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">PregnaGrowth</string>
+
+    <!--Login and Signup Activity-->
+    <string name="login_title">Selamat datang di PregnaGrowth!</string>
+    <string name="login_heading">Yuk masuk terlebih dahulu Moms!</string>
+    <string name="signup_heading">Lengkapi data di bawah ini ya Moms!</string>
+    <string name="desc_menu_1">Mengukur nutrisi harian Moms agar asupan gizi janin terpenuhi</string>
+    <string name="desc_menu_2">Memberikan laporan progres mingguan dan bulanan dari pemasukan nutrisi Moms</string>
+    <string name="desc_menu_3">Menyediakan jawaban dari pertanyaan yang sering muncul terkait kehamilan, dari berbagai sumber terpercaya</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">MASUK</string>
+    <string name="login_to_signup">Belum punya akun? Daftar</string>
+    <string name="full_name">Nama Lengkap</string>
+    <string name="username">Username</string>
+    <string name="birth_date">Tanggal Lahir</string>
+    <string name="signup">DAFTAR</string>
+    <string name="confirm_password">Konfirmasi Password</string>
+    <string name="signup_to_login">Sudah memiliki akun? Masuk</string>
+</resources>
