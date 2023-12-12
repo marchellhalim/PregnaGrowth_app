@@ -19,7 +19,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:alpha="0"
-            android:text="@string/signup_heading"
+            android:text= "@string/signup_heading"
             android:textColor="@color/black"
             android:textSize="18sp"
             android:textStyle="bold"

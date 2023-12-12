@@ -37,4 +37,10 @@
     <string name="seven_to_eight_hours">7-8 jam</string>
     <string name="more_than_eight_hours">Lebih dari 8 jam</string>
     <string name="example_weight">50</string>
+
+    <!-- Main Activity -->
+    <string name="hello">Halo,</string>
+    <string name="dummy_name">Anita Pramela</string>
+    <string name="pregnancy_age">Usia Janin</string>
+    <string name="dummy_pregnancy_age">1 minggu 1 hari</string>
 </resources>
