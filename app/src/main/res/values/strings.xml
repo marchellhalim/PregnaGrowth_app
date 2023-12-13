@@ -43,4 +43,25 @@
     <string name="dummy_name">Anita Pramela</string>
     <string name="pregnancy_age">Usia Janin</string>
     <string name="dummy_pregnancy_age">1 minggu 1 hari</string>
+    <string name="nutrition">NUTRISI</string>
+    <string name="dummy_calorie">1500</string>
+    <string name="daily_minimum_calorie_first_trimester">/1800 kcal</string>
+    <string name="daily_minimum_calorie_second_trimester">/2200 kcal</string>
+    <string name="daily_minimum_calorie_third_trimester">/2400 kcal</string>
+    <string name="calorie">Kalori</string>
+    <string name="fat">Lemak</string>
+    <string name="carbohydrates">Karbohidrat</string>
+    <string name="protein">Protein</string>
+    <string name="vitamins">Vitamin</string>
+    <string name="daily_nutrition_fulfilled_message">Yeay, kebutuhan nutrisi harian Moms sudah terpenuhi!</string>
+    <string name="daily_nutrition_unfulfilled_message">Ayo, jangan lupa penuhi kebutuhan nutrisinya ya Moms!</string>
+    <string name="FAQ">FAQ</string>
+    <string name="FAQ_description">Pertanyaan-pertanyaan seputar kehamilan untuk referensi Moms</string>
+
+    <!--FAQ Activity-->
+    <string name="faq_activity_headings">Dapatkan jawaban dari berbagai sumber terpercaya mengenai pertanyaan yang sering ditanyakan seputar kehamilan!</string>
+    <string name="search_bar_heading">Cari Pertanyaan</string>
+    <string name="recommendations">Rekomendasi</string>
+    <string name="searchbar_hint">Masukkan pertanyaan</string>
+    <string name="dummy_question">Apakah hidrasi berpengaruh \npada kesehatan janin?</string>
 </resources>

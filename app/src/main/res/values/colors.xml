@@ -3,4 +3,16 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="primary_blue">#48CAE4</color>
+
+    <!--Main Activity-->
+    <color name="calorie_color">#2d6a4f</color>
+    <color name="calorie_color_bg">#d8f3dc</color>
+    <color name="fats_color">#ffd400</color>
+    <color name="fats_color_bg">#ffee99</color>
+    <color name="carbohydrates_color">#4C89FF</color>
+    <color name="carbohydrates_color_bg">#caf0f8</color>
+    <color name="protein_color">#c9184a</color>
+    <color name="protein_color_bg">#ffccd5</color>
+    <color name="vitamins_color">#7b2cbf</color>
+    <color name="vitamins_color_bg">#e0aaff</color>
 </resources>
