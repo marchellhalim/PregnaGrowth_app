@@ -1,20 +1,32 @@
 package com.example.pregnagrowth.ui.main
 
+import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.graphics.Paint
 import android.graphics.Path
 import android.graphics.RectF
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.DisplayMetrics
+import android.view.WindowInsets
 import android.view.WindowManager
+import androidx.activity.viewModels
+import androidx.appcompat.app.AlertDialog
 import androidx.core.content.res.ResourcesCompat
 import com.example.pregnagrowth.R
+import com.example.pregnagrowth.ViewModelFactory
 import com.example.pregnagrowth.databinding.ActivityMainBinding
+import com.example.pregnagrowth.ui.login.LoginActivity
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
+
+    private val viewModel by viewModels<MainViewModel> {
+        ViewModelFactory.getInstance(this)
+    }
+
     private lateinit var mBitmap: Bitmap
     private lateinit var mCanvas: Canvas
     private val mPaint = Paint()
@@ -24,6 +36,29 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        viewModel.getSession().observe(this) { user ->
+            if (!user.isLogin) {
+                startActivity(Intent(this, LoginActivity::class.java))
+                finish()
+            } else {
+                setupView()
+                setupAction()
+            }
+        }
+    }
+
+    private fun setupView() {
+        @Suppress("DEPRECATION")
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+            window.insetsController?.hide(WindowInsets.Type.statusBars())
+        } else {
+            window.setFlags(
+                WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN
+            )
+        }
+        supportActionBar?.hide()
 
         val windowManager = getSystemService(WINDOW_SERVICE) as WindowManager
         val displayMetrics = DisplayMetrics()
@@ -36,6 +71,23 @@ class MainActivity : AppCompatActivity() {
 
         blueBackground()
         binding.blueBackground.setImageBitmap(mBitmap)
+    }
+
+    private fun setupAction() {
+        binding.ivProfile.setOnClickListener {
+            AlertDialog.Builder(this).apply {
+                setTitle("Keluar")
+                setMessage("Apakah Anda yakin ingin keluar?")
+                setPositiveButton("YA") { _, _ ->
+                    viewModel.logout()
+                }
+                setNegativeButton("TIDAK") { dialog, _ ->
+                    dialog.cancel()
+                }
+                create()
+                show()
+            }
+        }
     }
 
     private fun blueBackground() {
