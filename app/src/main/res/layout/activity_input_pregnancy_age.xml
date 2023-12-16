@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="32dp"
-    tools:context=".ui.signup.InputPregnancyAgeActivity">
+    tools:context=".ui.input_profile.InputPregnancyAgeActivity">
 
     <ImageView
         android:id="@+id/imageView"
@@ -18,7 +18,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/input_activity_image"
+        tools:srcCompat="@drawable/input_activity_image"
         tools:alpha="100"/>
 
     <TextView
@@ -69,147 +69,33 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_input_description"
         tools:alpha="100"/>
 
-    <Button
-        android:id="@+id/plus_button_weeks"
-        style="@style/Widget.Material3.Button.OutlinedButton"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/increase"
-        android:textAlignment="center"
-        android:textStyle="bold"
-        android:textSize="20sp"
+    <NumberPicker
+        android:id="@+id/pregnancy_age_number_picker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:alpha="0"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tv_days"
         app:layout_constraintTop_toBottomOf="@+id/tv_input_pregnancy_age"
-        app:strokeColor="@color/primary_blue"/>
-
-    <Button
-        android:id="@+id/minus_button_weeks"
-        style="@style/Widget.Material3.Button.OutlinedButton"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/decrease"
-        android:textAlignment="center"
-        android:textStyle="bold"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/plus_button_weeks"
-        app:strokeColor="@color/primary_blue"/>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/edt_layout_pregnancy_age_weeks"
-        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
-        android:layout_width="80dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:alpha="0"
-        app:layout_constraintStart_toEndOf="@id/plus_button_weeks"
-        app:layout_constraintTop_toTopOf="@id/plus_button_weeks"
-        app:boxStrokeColor="@color/primary_blue"
-        tools:alpha="100">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edt_pregnancy_age_weeks"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:textSize="40sp"
-            android:textAlignment="center"
-            android:ems="10"
-            android:inputType="number"
-            tools:ignore="SpeakableTextPresentCheck"
-            tools:text="5"/>
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <TextView
-        android:id="@+id/tv_weeks"
-        android:layout_width="80dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:alpha="0"
-        android:text="@string/week"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:textAlignment="center"
-        app:layout_constraintStart_toStartOf="@id/edt_layout_pregnancy_age_weeks"
-        app:layout_constraintEnd_toEndOf="@id/edt_layout_pregnancy_age_weeks"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintTop_toBottomOf="@+id/edt_layout_pregnancy_age_weeks"
-        app:layout_constraintBottom_toBottomOf="@id/minus_button_weeks"
         tools:alpha="100"/>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/edt_layout_pregnancy_age_days"
-        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
-        android:layout_width="80dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:alpha="0"
-        app:layout_constraintEnd_toStartOf="@+id/plus_button_days"
-        app:layout_constraintTop_toTopOf="@id/edt_layout_pregnancy_age_weeks"
-        app:boxStrokeColor="@color/primary_blue"
-        tools:alpha="100">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edt_pregnancy_age_days"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:textSize="40sp"
-            android:textAlignment="center"
-            android:ems="10"
-            android:inputType="number"
-            tools:ignore="SpeakableTextPresentCheck"
-            tools:text="7"/>
-    </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
         android:id="@+id/tv_days"
         android:layout_width="80dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:alpha="0"
         android:text="@string/day"
+        android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="18sp"
         android:textStyle="bold"
-        android:textAlignment="center"
-        app:layout_constraintStart_toStartOf="@id/edt_layout_pregnancy_age_days"
-        app:layout_constraintEnd_toEndOf="@id/edt_layout_pregnancy_age_days"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintTop_toBottomOf="@+id/edt_layout_pregnancy_age_days"
-        app:layout_constraintBottom_toBottomOf="@id/minus_button_days"
-        tools:alpha="100"/>
-
-    <Button
-        android:id="@+id/plus_button_days"
-        style="@style/Widget.Material3.Button.OutlinedButton"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/increase"
-        android:textAlignment="center"
-        android:textStyle="bold"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_input_pregnancy_age"
-        app:strokeColor="@color/primary_blue"/>
-
-    <Button
-        android:id="@+id/minus_button_days"
-        style="@style/Widget.Material3.Button.OutlinedButton"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/decrease"
-        android:textAlignment="center"
-        android:textStyle="bold"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/plus_button_days"
-        app:strokeColor="@color/primary_blue"/>
+        app:layout_constraintStart_toEndOf="@id/pregnancy_age_number_picker"
+        app:layout_constraintTop_toTopOf="@id/pregnancy_age_number_picker"
+        app:layout_constraintBottom_toBottomOf="@id/pregnancy_age_number_picker"
+        tools:alpha="100" />
 
     <Button
         android:id="@+id/continue_button"
@@ -223,4 +109,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:alpha="100" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -25,7 +25,7 @@
 
     <!--Buttons-->
     <string name="continue_button">LANJUT</string>
-    <string name="kg">kg</string>
+    <string name="kg">kilograms</string>
     <string name="week">minggu</string>
     <string name="day">hari</string>
     <string name="login">MASUK</string>
@@ -42,13 +42,13 @@
     <string name="hello">Halo,</string>
     <string name="dummy_name">Anita Pramela</string>
     <string name="pregnancy_age">Usia Janin</string>
-    <string name="dummy_pregnancy_age">1 minggu 1 hari</string>
+    <string name="dummy_pregnancy_age">50 hari</string>
     <string name="nutrition">NUTRISI</string>
     <string name="dummy_calorie">1500</string>
     <string name="daily_minimum_calorie_first_trimester">/1800 kcal</string>
     <string name="daily_minimum_calorie_second_trimester">/2200 kcal</string>
     <string name="daily_minimum_calorie_third_trimester">/2400 kcal</string>
-    <string name="calorie">Kalori</string>
+    <string name="calcium">Kalsium</string>
     <string name="fat">Lemak</string>
     <string name="carbohydrates">Karbohidrat</string>
     <string name="protein">Protein</string>
@@ -63,5 +63,19 @@
     <string name="search_bar_heading">Cari Pertanyaan</string>
     <string name="recommendations">Rekomendasi</string>
     <string name="searchbar_hint">Masukkan pertanyaan</string>
-    <string name="dummy_question">Apakah hidrasi berpengaruh \npada kesehatan janin?</string>
+    <string name="dummy_question">Apakah hidrasi berpengaruh pada kesehatan janin?</string>
+    <string name="dummy_answer">Ibu hamil adalah seorang wanita yang sedang mengandung atau mengalami kehamilan. Kehamilan adalah masa dimana seorang wanita mengandung janin di dalam rahimnya. Kehamilan biasanya berlangsung selama 9 bulan atau 40 minggu. Kehamilan yang berlangsung kurang dari 37 minggu disebut dengan kehamilan prematur atau kehamilan prematur. Sedangkan kehamilan yang berlangsung lebih dari 42 minggu disebut dengan kehamilan postmatur atau kehamilan melewati waktu.</string>
+
+    <!--Daily Intake Activity-->
+    <string name="daily_intake_heading">Apa saja yang Moms makan hari ini?</string>
+    <string name="breakfast">Breakfast</string>
+    <string name="lunch">Makan Siang</string>
+    <string name="dinner">Makan Malam</string>
+    <string name="dummy_food">Nasi Goreng</string>
+    <string name="dummy_grams"> 5 g</string>
+    <string name="minimum_daily_carbohydrates">/400 g</string>
+    <string name="minimum_daily_protein">/90 g</string>
+    <string name="minimum_daily_fats">/62,3 g</string>
+    <string name="minimum_daily_calcium">/1200 mg</string>
+
 </resources>

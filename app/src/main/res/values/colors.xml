@@ -5,8 +5,8 @@
     <color name="primary_blue">#48CAE4</color>
 
     <!--Main Activity-->
-    <color name="calorie_color">#2d6a4f</color>
-    <color name="calorie_color_bg">#d8f3dc</color>
+    <color name="calcium_color">#2d6a4f</color>
+    <color name="calcium_color_bg">#d8f3dc</color>
     <color name="fats_color">#ffd400</color>
     <color name="fats_color_bg">#ffee99</color>
     <color name="carbohydrates_color">#4C89FF</color>

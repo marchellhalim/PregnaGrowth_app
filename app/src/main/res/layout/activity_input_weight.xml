@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="32dp"
-    tools:context=".ui.signup.InputWeightActivity">
+    tools:context=".ui.input_profile.InputWeightActivity">
 
     <ImageView
         android:id="@+id/imageView"
@@ -18,7 +18,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/input_activity_image"
+        tools:srcCompat="@drawable/input_activity_image"
         tools:alpha="100"/>
 
     <TextView
@@ -69,76 +69,33 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_input_description"
         tools:alpha="100"/>
 
-    <Button
-        android:id="@+id/minus_button"
-        style="@style/Widget.Material3.Button.OutlinedButton"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="32dp"
-        android:text="@string/decrease"
-        android:textAlignment="center"
-        android:textStyle="bold"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_input_weight"
-        app:strokeColor="@color/primary_blue"/>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/edt_layout_weight"
-        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
-        android:layout_width="100dp"
+    <NumberPicker
+        android:id="@+id/weight_number_picker"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="8dp"
         android:alpha="0"
-        app:layout_constraintStart_toEndOf="@id/minus_button"
-        app:layout_constraintEnd_toStartOf="@+id/plus_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tv_kg"
         app:layout_constraintTop_toBottomOf="@+id/tv_input_weight"
-        app:layout_constraintBottom_toBottomOf="@+id/minus_button"
-        app:boxStrokeColor="@color/primary_blue"
-        tools:alpha="100">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edt_weight"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:textSize="40sp"
-            android:textAlignment="center"
-            android:ems="10"
-            android:inputType="number"
-            tools:ignore="SpeakableTextPresentCheck"
-            tools:text="@string/example_weight"/>
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <Button
-        android:id="@+id/plus_button"
-        style="@style/Widget.Material3.Button.OutlinedButton"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="32dp"
-        android:text="@string/increase"
-        android:textAlignment="center"
-        android:textStyle="bold"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_input_weight"
-        app:strokeColor="@color/primary_blue"/>
+        tools:alpha="100"/>
 
     <TextView
         android:id="@+id/tv_kg"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:alpha="0"
         android:text="@string/kg"
         android:textColor="@color/black"
-        android:textSize="18sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edt_layout_weight"
+        app:layout_constraintStart_toEndOf="@id/weight_number_picker"
+        app:layout_constraintTop_toTopOf="@id/weight_number_picker"
+        app:layout_constraintBottom_toBottomOf="@id/weight_number_picker"
         tools:alpha="100"/>
 
     <Button
@@ -154,4 +111,14 @@
         app:layout_constraintBottom_toBottomOf="parent"
         tools:alpha="100" />
 
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -16,6 +16,8 @@ import com.example.pregnagrowth.R
 import com.example.pregnagrowth.ResultState
 import com.example.pregnagrowth.ViewModelFactory
 import com.example.pregnagrowth.databinding.ActivitySignupBinding
+import com.example.pregnagrowth.ui.input_profile.InputWeightActivity
+import com.example.pregnagrowth.ui.input_profile.InputWeightActivity.Companion.USER_ID
 import com.example.pregnagrowth.ui.login.LoginActivity
 import com.example.pregnagrowth.ui.main.MainActivity
 import com.example.pregnagrowth.utils.DatePickerFragment
@@ -74,14 +76,14 @@ class SignupActivity : AppCompatActivity(), DatePickerFragment.DialogDateListene
                         }
 
                         is ResultState.Success -> {
+                            val userId = result.data.user?.id.toString()
                             AlertDialog.Builder(this).apply {
                                 setTitle("Yeah!")
-                                setMessage("Akun sudah jadi nih. Yuk, login dahulu Moms!")
+                                setMessage("Akun sudah jadi nih. Yuk, isi data berikut terlebih dahulu!")
                                 setPositiveButton("LANJUT") { _, _ ->
-                                    val intent = Intent(this@SignupActivity, LoginActivity::class.java)
-                                    intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+                                    val intent = Intent(this@SignupActivity, InputWeightActivity::class.java)
+                                    intent.putExtra(USER_ID, userId)
                                     startActivity(intent)
-                                    finish()
                                 }
                                 create()
                                 show()

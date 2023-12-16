@@ -40,9 +40,9 @@
             android:id="@+id/tv_faq_description"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="16dp"
             android:text= "@string/faq_activity_headings"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="14sp"
             android:textStyle="normal"
             android:textAlignment="center"
@@ -50,7 +50,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_faq"/>
 
-        <TextView
+        <!--<TextView
             android:id="@+id/tv_search_bar_heading"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -95,17 +95,31 @@
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/search_bar"/>
+            app:layout_constraintTop_toBottomOf="@id/search_bar"/>-->
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_questions_list"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:padding="8dp"
+            android:layout_marginTop="8dp"
+            android:paddingTop="8dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_recommendations_heading"/>
+            app:layout_constraintTop_toBottomOf="@id/tv_faq_description"/>
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/rv_questions_list"
+            app:layout_constraintEnd_toEndOf="@id/rv_questions_list"
+            app:layout_constraintStart_toStartOf="@id/rv_questions_list"
+            app:layout_constraintTop_toTopOf="@id/rv_questions_list"
+            tools:visibility="visible" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

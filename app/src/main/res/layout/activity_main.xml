@@ -88,7 +88,7 @@
             tools:text="@string/dummy_pregnancy_age"
             android:textColor="@color/black"
             android:textStyle="bold"
-            android:textSize="15sp"
+            android:textSize="16sp"
             app:layout_constraintStart_toStartOf="@id/tv_pregnancy_age_desc"
             app:layout_constraintTop_toBottomOf="@id/tv_pregnancy_age_desc" />
 
@@ -96,7 +96,10 @@
             android:id="@+id/nutrition_card_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
             app:cardCornerRadius="10dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -131,22 +134,6 @@
                     app:layout_constraintTop_toBottomOf="@id/tv_title_nutrition">
 
                     <com.mikhaellopez.circularprogressbar.CircularProgressBar
-                        android:id="@+id/progress_bar_calories"
-                        android:layout_width="210dp"
-                        android:layout_height="210dp"
-
-                        app:cpb_progress="0"
-                        app:cpb_progress_direction="to_right"
-                        app:cpb_progressbar_color="@color/calorie_color"
-                        app:cpb_background_progressbar_color="@color/calorie_color_bg"
-                        app:cpb_progressbar_width="10dp"
-                        app:cpb_background_progressbar_width="10dp"
-                        app:cpb_round_border="true"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        tools:cpb_progress="70" />
-
-                    <com.mikhaellopez.circularprogressbar.CircularProgressBar
                         android:id="@+id/progress_bar_carbohydrates"
                         android:layout_width="190dp"
                         android:layout_height="190dp"
@@ -157,10 +144,8 @@
                         app:cpb_progressbar_width="10dp"
                         app:cpb_background_progressbar_width="10dp"
                         app:cpb_round_border="true"
-                        app:layout_constraintStart_toStartOf="@id/progress_bar_calories"
-                        app:layout_constraintEnd_toEndOf="@id/progress_bar_calories"
-                        app:layout_constraintTop_toTopOf="@id/progress_bar_calories"
-                        app:layout_constraintBottom_toBottomOf="@id/progress_bar_calories"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
                         tools:cpb_progress="50" />
 
                     <com.mikhaellopez.circularprogressbar.CircularProgressBar
@@ -214,61 +199,34 @@
                         app:layout_constraintBottom_toBottomOf="@id/progress_bar_protein"
                         tools:cpb_progress="20" />
 
-                    <TextView
-                        android:id="@+id/tv_daily_calories_count"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="32dp"
-                        tools:text="@string/dummy_calorie"
-                        android:textColor="@color/calorie_color"
-                        android:textSize="32sp"
-                        android:textStyle="bold"
+                    <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                        android:id="@+id/progress_bar_calcium"
+                        android:layout_width="110dp"
+                        android:layout_height="110dp"
+                        app:cpb_progress="0"
+                        app:cpb_progress_direction="to_right"
+                        app:cpb_progressbar_color="@color/calcium_color"
+                        app:cpb_background_progressbar_color="@color/calcium_color_bg"
+                        app:cpb_progressbar_width="10dp"
+                        app:cpb_background_progressbar_width="10dp"
+                        app:cpb_round_border="true"
                         app:layout_constraintStart_toStartOf="@id/progress_bar_vitamins"
                         app:layout_constraintEnd_toEndOf="@id/progress_bar_vitamins"
-                        app:layout_constraintTop_toTopOf="@id/progress_bar_vitamins"/>
+                        app:layout_constraintTop_toTopOf="@id/progress_bar_vitamins"
+                        app:layout_constraintBottom_toBottomOf="@id/progress_bar_vitamins"
+                        tools:cpb_progress="40" />
 
-                    <TextView
-                        android:id="@+id/tv_per_calories"
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="0dp"
-                        android:text="@string/daily_minimum_calorie_first_trimester"
-                        android:textColor="@color/calorie_color"
-                        android:textSize="12sp"
-                        android:textAlignment="center"
-                        android:textStyle="bold"
-                        app:layout_constraintStart_toStartOf="@id/progress_bar_vitamins"
-                        app:layout_constraintEnd_toEndOf="@id/progress_bar_vitamins"
-                        app:layout_constraintTop_toBottomOf="@id/tv_daily_calories_count"/>
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/layout_nutrition_legends"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     app:layout_constraintTop_toTopOf="@id/progress_bar"
                     app:layout_constraintBottom_toBottomOf="@+id/progress_bar"
                     app:layout_constraintStart_toEndOf="@id/progress_bar">
 
-                    <ImageView
-                        android:id="@+id/iv_calories"
-                        android:layout_width="10dp"
-                        android:layout_height="10dp"
-                        android:src="@drawable/ic_calories"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"/>
-
-                    <TextView
-                        android:id="@+id/tv_calories"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:text="@string/calorie"
-                        android:textSize="12sp"
-                        app:layout_constraintTop_toTopOf="@id/iv_calories"
-                        app:layout_constraintStart_toEndOf="@id/iv_calories"
-                        app:layout_constraintBottom_toBottomOf="@id/iv_calories"/>
 
                     <ImageView
                         android:id="@+id/iv_carbohydrates"
@@ -277,15 +235,15 @@
                         android:layout_marginTop="8dp"
                         android:src="@drawable/ic_carbohydrates"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/iv_calories" />
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
                         android:id="@+id/tv_carbohydrates"
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="8dp"
                         android:text="@string/carbohydrates"
-                        android:textSize="12sp"
+                        android:textSize="11sp"
                         app:layout_constraintTop_toTopOf="@id/iv_carbohydrates"
                         app:layout_constraintStart_toEndOf="@id/iv_carbohydrates"
                         app:layout_constraintBottom_toBottomOf="@id/iv_carbohydrates"/>
@@ -305,7 +263,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="8dp"
                         android:text="@string/fat"
-                        android:textSize="12sp"
+                        android:textSize="11sp"
                         app:layout_constraintTop_toTopOf="@id/iv_fats"
                         app:layout_constraintStart_toEndOf="@id/iv_fats"
                         app:layout_constraintBottom_toBottomOf="@id/iv_fats"/>
@@ -325,7 +283,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="8dp"
                         android:text="@string/protein"
-                        android:textSize="12sp"
+                        android:textSize="11sp"
                         app:layout_constraintTop_toTopOf="@id/iv_protein"
                         app:layout_constraintStart_toEndOf="@id/iv_protein"
                         app:layout_constraintBottom_toBottomOf="@id/iv_protein" />
@@ -345,19 +303,40 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="8dp"
                         android:text="@string/vitamins"
-                        android:textSize="12sp"
+                        android:textSize="11sp"
                         app:layout_constraintTop_toTopOf="@id/iv_vitamins"
                         app:layout_constraintStart_toEndOf="@id/iv_vitamins"
                         app:layout_constraintBottom_toBottomOf="@id/iv_vitamins"/>
+
+                    <ImageView
+                        android:id="@+id/iv_calcium"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/ic_calcium"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/iv_vitamins" />
+
+                    <TextView
+                        android:id="@+id/tv_calcium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="@string/calcium"
+                        android:textSize="11sp"
+                        app:layout_constraintTop_toTopOf="@id/iv_calcium"
+                        app:layout_constraintStart_toEndOf="@id/iv_calcium"
+                        app:layout_constraintBottom_toBottomOf="@id/iv_calcium"/>
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <TextView
                     android:id="@+id/tv_nutrition_message"
                     android:layout_marginTop="16dp"
-                    android:layout_width="300dp"
+                    android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:text="@string/daily_nutrition_unfulfilled_message"
-                    android:textSize="12sp"
+                    android:lines="2"
+                    android:textSize="14sp"
                     android:textAlignment="center"
                     app:layout_constraintTop_toBottomOf="@id/progress_bar"
                     app:layout_constraintStart_toStartOf="parent"
@@ -370,7 +349,7 @@
             android:id="@+id/faq_card_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
+            android:layout_margin="8dp"
             app:cardCornerRadius="10dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -408,17 +387,17 @@
 
                 <TextView
                     android:id="@+id/tv_faq_description"
-                    android:layout_width="200dp"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
+                    android:text="@string/FAQ_description"
                     android:textAlignment="center"
                     android:textSize="14sp"
-                    android:text= "@string/FAQ_description"
-                    app:layout_constraintStart_toEndOf="@id/iv_faq"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"/>
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@id/iv_faq"
+                    app:layout_constraintTop_toTopOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>

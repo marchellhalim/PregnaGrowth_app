@@ -4,6 +4,8 @@ import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.example.pregnagrowth.di.Injection
+import com.example.pregnagrowth.ui.faq.FAQViewModel
+import com.example.pregnagrowth.ui.input_profile.InputProfileViewModel
 import com.example.pregnagrowth.ui.login.LoginViewModel
 import com.example.pregnagrowth.ui.main.MainViewModel
 import com.example.pregnagrowth.ui.signup.SignupViewModel
@@ -24,7 +26,12 @@ class ViewModelFactory(private val repository: Repository) :
             modelClass.isAssignableFrom(SignupViewModel::class.java) -> {
                 SignupViewModel(repository) as T
             }
-
+            modelClass.isAssignableFrom(InputProfileViewModel::class.java) -> {
+                InputProfileViewModel(repository) as T
+            }
+            modelClass.isAssignableFrom(FAQViewModel::class.java) -> {
+                FAQViewModel(repository) as T
+            }
             else -> throw IllegalArgumentException("Unknown ViewModel class: " + modelClass.name)
         }
     }

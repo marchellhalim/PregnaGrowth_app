@@ -18,6 +18,8 @@ import androidx.core.content.res.ResourcesCompat
 import com.example.pregnagrowth.R
 import com.example.pregnagrowth.ViewModelFactory
 import com.example.pregnagrowth.databinding.ActivityMainBinding
+import com.example.pregnagrowth.ui.faq.FAQActivity
+import com.example.pregnagrowth.ui.input_profile.InputPregnancyAgeActivity
 import com.example.pregnagrowth.ui.login.LoginActivity
 
 class MainActivity : AppCompatActivity() {
@@ -87,6 +89,11 @@ class MainActivity : AppCompatActivity() {
                 create()
                 show()
             }
+        }
+
+        binding.faqCardView.setOnClickListener {
+            val intent = Intent(this@MainActivity, FAQActivity::class.java)
+            startActivity(intent)
         }
     }
 
