@@ -15,6 +15,9 @@
         android:theme="@style/Theme.PregnaGrowth"
         tools:targetApi="31">
         <activity
+            android:name=".ui.detail_intake.ResultActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.detail_intake.DetailIntakeActivity"
             android:exported="false" />
         <activity

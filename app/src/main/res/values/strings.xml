@@ -66,16 +66,20 @@
     <string name="dummy_question">Apakah hidrasi berpengaruh pada kesehatan janin?</string>
     <string name="dummy_answer">Ibu hamil adalah seorang wanita yang sedang mengandung atau mengalami kehamilan. Kehamilan adalah masa dimana seorang wanita mengandung janin di dalam rahimnya. Kehamilan biasanya berlangsung selama 9 bulan atau 40 minggu. Kehamilan yang berlangsung kurang dari 37 minggu disebut dengan kehamilan prematur atau kehamilan prematur. Sedangkan kehamilan yang berlangsung lebih dari 42 minggu disebut dengan kehamilan postmatur atau kehamilan melewati waktu.</string>
 
-    <!--Daily Intake Activity-->
+    <!--Daily Intake & Result Activity-->
     <string name="daily_intake_heading">Apa saja yang Moms makan hari ini?</string>
-    <string name="breakfast">Breakfast</string>
-    <string name="lunch">Makan Siang</string>
-    <string name="dinner">Makan Malam</string>
+    <string name="breakfast">SARAPAN</string>
+    <string name="lunch">MAKAN SIANG</string>
+    <string name="dinner">MAKAN MALAM</string>
     <string name="dummy_food">Nasi Goreng</string>
-    <string name="dummy_grams"> 5 g</string>
+    <string name="dummy_amount"> 5</string>
     <string name="minimum_daily_carbohydrates">/400 g</string>
     <string name="minimum_daily_protein">/90 g</string>
     <string name="minimum_daily_fats">/62,3 g</string>
     <string name="minimum_daily_calcium">/1200 mg</string>
+    <string name="grams">g</string>
+    <string name="milligrams">mg</string>
+    <string name="add">TAMBAH</string>
+    <string name="edit">UBAH</string>
 
 </resources>
