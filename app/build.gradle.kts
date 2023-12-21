@@ -44,6 +44,8 @@ android {
 dependencies {
     implementation("com.github.bumptech.glide:glide:4.16.0")
 
+    implementation("androidx.exifinterface:exifinterface:1.3.6")
+
     implementation ("com.mikhaellopez:circularprogressbar:3.1.0")
 
     implementation("androidx.paging:paging-runtime-ktx:3.2.1")
@@ -51,6 +53,7 @@ dependencies {
 
     implementation("androidx.room:room-common:2.5.1")
     implementation("androidx.room:room-ktx:2.5.1")
+    implementation("androidx.work:work-runtime-ktx:2.9.0")
     kapt("androidx.room:room-compiler:2.5.1")
 
     implementation("androidx.datastore:datastore-preferences:1.0.0")

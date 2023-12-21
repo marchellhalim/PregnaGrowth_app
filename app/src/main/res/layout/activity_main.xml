@@ -83,13 +83,25 @@
             android:id="@+id/tv_pregnancy_age"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="24dp"
             android:maxLines="1"
             tools:text="@string/dummy_pregnancy_age"
             android:textColor="@color/black"
             android:textStyle="bold"
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="@id/tv_pregnancy_age_desc"
+            app:layout_constraintTop_toBottomOf="@id/tv_pregnancy_age_desc" />
+
+        <TextView
+            android:id="@+id/tv_pregnancy_age_day"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:maxLines="1"
+            android:text="@string/day"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@id/tv_pregnancy_age"
             app:layout_constraintTop_toBottomOf="@id/tv_pregnancy_age_desc" />
 
         <androidx.cardview.widget.CardView
@@ -243,7 +255,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="8dp"
                         android:text="@string/carbohydrates"
-                        android:textSize="11sp"
+                        android:textSize="10sp"
                         app:layout_constraintTop_toTopOf="@id/iv_carbohydrates"
                         app:layout_constraintStart_toEndOf="@id/iv_carbohydrates"
                         app:layout_constraintBottom_toBottomOf="@id/iv_carbohydrates"/>
@@ -263,7 +275,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="8dp"
                         android:text="@string/fat"
-                        android:textSize="11sp"
+                        android:textSize="10sp"
                         app:layout_constraintTop_toTopOf="@id/iv_fats"
                         app:layout_constraintStart_toEndOf="@id/iv_fats"
                         app:layout_constraintBottom_toBottomOf="@id/iv_fats"/>
@@ -283,7 +295,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="8dp"
                         android:text="@string/protein"
-                        android:textSize="11sp"
+                        android:textSize="10sp"
                         app:layout_constraintTop_toTopOf="@id/iv_protein"
                         app:layout_constraintStart_toEndOf="@id/iv_protein"
                         app:layout_constraintBottom_toBottomOf="@id/iv_protein" />
@@ -303,7 +315,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="8dp"
                         android:text="@string/vitamins"
-                        android:textSize="11sp"
+                        android:textSize="10sp"
                         app:layout_constraintTop_toTopOf="@id/iv_vitamins"
                         app:layout_constraintStart_toEndOf="@id/iv_vitamins"
                         app:layout_constraintBottom_toBottomOf="@id/iv_vitamins"/>
@@ -323,7 +335,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="8dp"
                         android:text="@string/calcium"
-                        android:textSize="11sp"
+                        android:textSize="10sp"
                         app:layout_constraintTop_toTopOf="@id/iv_calcium"
                         app:layout_constraintStart_toEndOf="@id/iv_calcium"
                         app:layout_constraintBottom_toBottomOf="@id/iv_calcium"/>
@@ -332,7 +344,7 @@
                 <TextView
                     android:id="@+id/tv_nutrition_message"
                     android:layout_marginTop="16dp"
-                    android:layout_width="200dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/daily_nutrition_unfulfilled_message"
                     android:lines="2"

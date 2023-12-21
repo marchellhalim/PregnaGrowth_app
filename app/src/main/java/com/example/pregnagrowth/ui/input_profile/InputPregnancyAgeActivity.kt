@@ -60,10 +60,10 @@ class InputPregnancyAgeActivity : AppCompatActivity() {
 
     private fun setupAction() {
         val userId = intent.getStringExtra(USER_ID)?.toInt()
-        val weight = intent.getStringExtra(USER_WEIGHT)?.toInt()
+        val weight = intent.getStringExtra(USER_WEIGHT)!!
 
         binding.continueButton.setOnClickListener {
-            val pregnancyAge = binding.pregnancyAgeNumberPicker.value
+            val pregnancyAge = binding.pregnancyAgeNumberPicker.value.toString().trim()
             viewModel.profile(null, weight, pregnancyAge, null, userId).observe(this) { result ->
                 if (result != null) {
                     when (result) {

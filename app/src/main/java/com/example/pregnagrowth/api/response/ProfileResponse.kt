@@ -14,10 +14,10 @@ data class ProfileResponse(
 data class Profile(
 
 	@field:SerializedName("umur_janin")
-	val umurJanin: Int? = null,
+	val umurJanin: String? = null,
 
 	@field:SerializedName("berat_badan")
-	val beratBadan: Int? = null,
+	val beratBadan: String? = null,
 
 	@field:SerializedName("bio")
 	val bio: String? = null,
@@ -26,7 +26,7 @@ data class Profile(
 	val id: Int? = null,
 
 	@field:SerializedName("jam_tidur")
-	val jamTidur: Int? = null,
+	val jamTidur: String? = null,
 
 	@field:SerializedName("userId")
 	val userId: Int? = null

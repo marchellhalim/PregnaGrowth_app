@@ -1,35 +1,26 @@
 package com.example.pregnagrowth.api
 
-import okhttp3.Interceptor
+import com.example.pregnagrowth.BuildConfig
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import com.example.pregnagrowth.BuildConfig
 
-object ApiConfig {
-    fun getApiService(token: String): ApiService {
+object ApiConfigFoodPrediction {
+    fun getApiService(): ApiServiceFoodPrediction {
         val loggingInterceptor = if (BuildConfig.DEBUG) {
             HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)
         } else {
             HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.NONE)
         }
-        val authInterceptor = Interceptor { chain ->
-            val req = chain.request()
-            val requestHeaders = req.newBuilder()
-                .addHeader("Authorization", "Bearer $token")
-                .build()
-            chain.proceed(requestHeaders)
-        }
         val client = OkHttpClient.Builder()
             .addInterceptor(loggingInterceptor)
-            .addInterceptor(authInterceptor)
             .build()
         val retrofit = Retrofit.Builder()
-            .baseUrl("http://35.223.73.159:8080/api/")
+            .baseUrl("https://mlservice-4vzcsyuosa-uc.a.run.app/")
             .addConverterFactory(GsonConverterFactory.create())
             .client(client)
             .build()
-        return retrofit.create(ApiService::class.java)
+        return retrofit.create(ApiServiceFoodPrediction::class.java)
     }
 }

@@ -42,7 +42,7 @@
     <string name="hello">Halo,</string>
     <string name="dummy_name">Anita Pramela</string>
     <string name="pregnancy_age">Usia Janin</string>
-    <string name="dummy_pregnancy_age">50 hari</string>
+    <string name="dummy_pregnancy_age">50</string>
     <string name="nutrition">NUTRISI</string>
     <string name="dummy_calorie">1500</string>
     <string name="daily_minimum_calorie_first_trimester">/1800 kcal</string>
@@ -81,5 +81,6 @@
     <string name="milligrams">mg</string>
     <string name="add">TAMBAH</string>
     <string name="edit">UBAH</string>
+    <string name="empty_image_warning">Silakan foto makanan terlebih dahulu.</string>
 
 </resources>

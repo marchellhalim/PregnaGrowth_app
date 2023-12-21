@@ -62,7 +62,7 @@ class InputWeightActivity : AppCompatActivity() {
         val userId = intent.getStringExtra(USER_ID)?.toInt()
 
         binding.continueButton.setOnClickListener {
-            val weight = binding.weightNumberPicker.value
+            val weight = binding.weightNumberPicker.value.toString().trim()
             viewModel.profile(null, weight, null, null, userId).observe(this) { result ->
                 if (result != null) {
                     when (result) {
@@ -72,7 +72,8 @@ class InputWeightActivity : AppCompatActivity() {
 
                         is ResultState.Success -> {
                             val intent = Intent(this@InputWeightActivity, InputPregnancyAgeActivity::class.java)
-                            intent.putExtra(USER_WEIGHT, weight.toString())
+                            intent.putExtra(USER_WEIGHT, weight)
+                            intent.putExtra(USER_ID, userId.toString())
                             startActivity(intent)
                             showLoading(false)
                         }
