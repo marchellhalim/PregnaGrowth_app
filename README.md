@@ -55,6 +55,7 @@ Below are some external libraries that is being used in the application:
 
 # APK and Notice
 You can install the application from the link here: [PregnaGrowth.apk](https://drive.google.com/file/d/1wZg5OXF3PEJdn51DP4Qpg-yRE5QHHCQt/view?usp=sharing)
+
 There are some bugs that needs to be noted and still on fixing process:
 1. If the application crashes or returned to the main screen after taking a photo, then you'll need to lower the camera resolution to the lowest setting first.
 2. After the first time taking a photo, usually the app will crash or return to main screen due to server problem, but if if you retry it again it will work.
