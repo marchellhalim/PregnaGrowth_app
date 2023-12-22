@@ -18,7 +18,7 @@ If the user has not yet made an account, then they can register for a new one as
 After the user successfully registered their new account, the application will ask user to fill their current body weight.
 
 ## Input Pregnancy Age Activity
-<img src="images/InputPregnancyAgeActivity" alt="Input Pregnancy Age Activity" width="200"/>
+<img src="images/InputPregnancyAgeActivity.png" alt="Input Pregnancy Age Activity" width="200"/>
 
 After inputting body weight, the application will ask user to input their current pregnancy age in days.
 
