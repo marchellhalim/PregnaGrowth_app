@@ -3,7 +3,8 @@ PregnaGrowth is an Android application specifically made for pregnant mothers to
 
 # Activities
 ## Login Activity
-![Login Activity](images/LoginActivity.png)
+<img src="images/LoginActivity.png" alt="Login Activity" width="200"/>
+
 This Activity will be displayed when the user opened the application for the first time after it is being installed. This Activity requires users to input their registered email and password.
 
 ## Signup Activity
